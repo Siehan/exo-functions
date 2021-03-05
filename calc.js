@@ -24,20 +24,46 @@ et le résultat sera retourné Vous devrez absolument vous servir des 4 fonction
 const add = (nb1, nb2) => {
   return nb1 + nb2;
 };
-/*let result = add(10, 5);*/
 console.log(add(10, 5));
+// Output : 15
 
-const add = (nb1, nb2) => {
+const sub = (nb1, nb2) => {
   return nb1 - nb2;
 };
-console.log(add(10, 5));
+console.log(sub(10, 5));
+// Output : 5
 
-const add = (nb1, nb2) => {
+const mul = (nb1, nb2) => {
   return nb1 * nb2;
 };
-console.log(add(10, 5));
+console.log(mul(10, 5));
+// Output : 50
 
-const add = (nb1, nb2) => {
+const div = (nb1, nb2) => {
   return nb1 / nb2;
 };
-console.log(add(10, 5));
+console.log(div(10, 5));
+// Output : 2
+
+const calc = (plus, nb1, nb2) => {
+  switch (plus) {
+    case "+":
+      add(nb1, nb2);
+      breack;
+    case "-":
+      sub(nb1, nb2);
+      breack;
+    case "*":
+      mul(nb1, nb2);
+      breack;
+    case "/":
+      div(nb1, nb2);
+      breack;
+    default:
+      Sorry;
+
+      console.log(calc);
+  }
+};
+
+console.log(calc(10, 5));
