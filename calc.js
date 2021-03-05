@@ -45,25 +45,29 @@ const div = (nb1, nb2) => {
 console.log(div(10, 5));
 // Output : 2
 
-const calc = (plus, nb1, nb2) => {
-  switch (plus) {
+const calc = (operateur, nb1, nb2) => {
+  switch (operateur) {
     case "+":
-      add(nb1, nb2);
-      breack;
+      return add(nb1, nb2);
     case "-":
-      sub(nb1, nb2);
-      breack;
+      return sub(nb1, nb2);
     case "*":
-      mul(nb1, nb2);
-      breack;
+      return mul(nb1, nb2);
     case "/":
-      div(nb1, nb2);
-      breack;
+      return div(nb1, nb2);
     default:
-      Sorry;
-
-      console.log(calc);
+      "operateur inconnu";
   }
 };
 
-console.log(calc(10, 5));
+console.log(calc("+", 10, 2));
+console.log(calc("-", 10, 2));
+console.log(calc("*", 10, 2));
+console.log(calc("/", 10, 2));
+/*
+Output :
+12
+8
+20
+5
+*/
