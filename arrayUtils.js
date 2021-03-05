@@ -1,5 +1,6 @@
 /*
 arrayUtils.js
+
 Ecrivez une fonction biggest qui retourne le plus grand élément d'une liste de nombre.
 biggest([99, 100, 101, 1]) // returns 101
 
@@ -23,9 +24,9 @@ sortAscend.sort((a, b) => a - b);
 console.log(sortAscend);
 // output: [ 1, 99, 100, 101 ]
 
-const makeUnique = [1, 2, 1, 3, 2, 4, 5, 7, 5, 1];
-makeUnique.filter((item, index) => {
-  console.log(makeUnique.indexOf(item) === index);
-  return makeUnique.indexOf(item) === index;
-});
-// output: [ 1, 2, 3, 4, 5, 7 ]
+const makeUnique = (item, index, array) => {
+  return array.indexOf(item) === index;
+};
+const nbList = [1, 2, 1, 3, 2, 4, 5, 7, 5, 1];
+console.log(nbList.filter(makeUnique));
+// output: [ 1, 2, 3, 4, 5, 7]
